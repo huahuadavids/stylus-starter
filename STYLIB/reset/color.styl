@@ -1,0 +1,32 @@
+c(v)
+  color: v
+op(val)
+  opacity: val;
+  -moz-opacity: val;
+  -khtml-opacity: val;
+  filter: Alpha(opacity\=val*100);
+
+
+bg(v)
+  if v == n || v == none
+    background: none
+  else
+    background: v
+bg-i()
+  background-image: arguments
+bg-s()
+  background-size: arguments
+bg-p()
+  background-position: arguments
+
+bg-r(v)
+  if v == r
+    background-repeat: repeat
+  else if v == x
+    background-repeat: repeat-x
+  else if v == y
+    background-repeat: repeat-y
+  else if v == n
+    background-repeat: no-repeat
+  else
+    background-repeat: v

@@ -1,0 +1,54 @@
+// text
+t-l(v)
+  if v == l || v == left
+    text-align: left
+  else if v == c || v == center
+    text-align: center
+  else if v == r or v == right
+    text-align: right
+  else
+    text-align: v
+t-d()
+  text-decoration: arguments
+t-i()
+  text-indent: arguments
+t-o()
+  text-overflow: arguments
+t-s()
+  text-shadow: arguments
+
+/**
+* @font
+*/
+
+f-s()
+  font-size: arguments
+f-f()
+  font-family: arguments
+f-w(v)
+  if v == b or v == bold
+    font-weight: bold
+  else if v == l or v == lighter
+    font-weight: lighter
+  else if v == n or v == normal
+    font-weight: normal
+  else
+    font-weight: v
+
+//规定段落中的文本不进行换行：(nowrap)
+w-s(v)
+  if v == nowrap or v == n
+    white-space: nowrap
+  else
+    white-space: v
+//长单词换行
+w-w(v)
+  if v == b or v == break-word
+    word-wrap: break-word
+  else
+    word-wrap: v
+/**
+* content
+*/
+co()
+  content: arguments

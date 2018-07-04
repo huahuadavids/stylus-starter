@@ -1,0 +1,46 @@
+/**
+*  @position
+*/
+p(v)
+  if v == r || v == relative
+    position: relative
+  else if v == a || v == absolute
+    position: absolute
+  else if v == f || v == fixed
+    position: fixed
+  else
+    position: v
+z()
+  z-index: arguments
+t()
+  top: arguments
+b()
+  bottom: arguments
+l()
+  left: arguments
+r()
+  right: arguments
+
+f(v)
+  if v == left or v == l
+    float: left
+  else if v == right or v == r
+    float: right
+  else
+    float: none
+cl(v)
+  if v == b or v == both
+    clear: both
+  else
+    clear: v
+
+
+v-l(v)
+  if v == top or v == t
+    vertical-align: top
+  else if v == bottom or v == b
+    vertical-align: bottom
+  else if v == middle or v == m
+    vertical-align: middle
+  else
+    vertical-align: v

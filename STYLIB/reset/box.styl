@@ -1,0 +1,65 @@
+/**
+*@ border
+*/
+bor()
+  if arguments == n
+    border: none
+  else
+    border: arguments
+b-l()
+  border-left: arguments
+b-r()
+  border-right: arguments
+b-t()
+  border-top: arguments
+b-b()
+  border-bottom: arguments
+/**
+*@ margin
+*/
+mar()
+  margin: arguments
+
+m-l()
+  if arguments == a || arguments == auto
+    margin-left: auto
+  else
+    margin-left: arguments
+m-r()
+  if arguments == a || arguments == auto
+    margin-right: auto
+  else
+    margin-right: arguments
+
+m-t()
+  margin-top: arguments
+
+m-b()
+  margin-bottom: arguments
+/**
+*@ padding
+*/
+pad()
+  padding: arguments
+p-l()
+  padding-left: arguments
+p-r()
+  padding-right: arguments
+p-t()
+  padding-top: arguments
+p-b()
+  padding-bottom: arguments
+
+b-s(v)
+  if v == b-b || v == border-box
+    box-sizing: border-box
+    -moz-box-sizing: border-box
+    -webkit-box-sizing: border-box
+  else if v == c-b || v == content-box
+    box-sizing: content-box
+    -moz-box-sizing: content-box
+    -webkit-box-sizing: content-box
+  else
+    box-sizing: v
+    -moz-box-sizing: v
+    -webkit-box-sizing: v

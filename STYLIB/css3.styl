@@ -1,0 +1,149 @@
+@import "define.styl"
+
+a-p(v)
+  vendor('appearance',v)
+
+a-dh(v...)
+  vendor('animation',v)
+
+a-mz(v)
+  vendor('animation-name',v)
+
+a-cs(v)
+  vendor('animation-iteration-count',v)
+
+a-fx(v)
+  vendor('animation-direction',v)
+
+a-yc(v)
+  vendor('animation-delay',v)
+
+a-cx(v)
+  vendor('animation-duration',v)
+
+a-qx(v)
+  vendor('animation-timing-function',v)
+
+a-zt(v)
+  vendor('animation-play-state',v)
+
+yj(args...)
+  vendor('border-radius',args)
+
+b-x(args...)
+  vendor('box-shadow',args)
+  //filter: progid:DXImageTransform.Microsoft.Shadow(color=args[3],direction=120,strength=4)
+
+u-s(v)
+  vendor('user-select',v)
+xz()
+  vendor('user-select',arguments)
+
+tf(v...)
+  vendor('transform',v)
+gb(v...)
+  vendor('transform',v)
+
+
+ti(args...)
+  vendor('transition',args)
+
+gd(args...)
+  vendor('transition',args)
+gd-cx(v)
+  vendor('transition-duration',v)
+gd-yc(v)
+  vendor('transition-delay',v)
+gd-sx(v)
+  vendor('transition-property',v)
+gd-qx(v)
+  vendor('transition-timing-function',v)
+
+
+// flex
+x-d(v)
+  -webkit-box-orient: v == column ? vertical : v;
+  -webkit-flex-direction: v;
+  -ms-flex-direction: v;
+  flex-direction: v;
+
+x-w(v)
+  flex-wrap: v
+  -webkit-flex-wrap: v
+
+x-f(v)
+  flex-flow: v
+  -webkit-flex-flow: v
+
+x-x(v)
+  if v == end
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+  if v == space-between
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  else
+    -webkit-box-pack: v;
+    -ms-flex-pack: v;
+    -webkit-justify-content: v;
+    justify-content: v;
+
+x-y(v)
+  if v == start
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+  if v == end
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+  else
+    -webkit-box-align: v;
+    -ms-flex-align: v;
+    -webkit-align-items: v;
+    align-items: v;
+
+x-z()
+  align-content: arguments
+  -webkit-align-content: arguments
+
+x-o(val)
+  -webkit-box-ordinal-group: val; /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-ordinal-group: val; /* OLD - Firefox 19- */
+  -ms-flex-order: val; /* TWEENER - IE 10 */
+  -webkit-order: val; /* NEW - Chrome */
+  order: val;
+
+x--(val)
+  -webkit-box-flex: val; /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: val; /* OLD - Firefox 19- */
+  -webkit-flex: val; /* Chrome */
+  -ms-flex: val; /* IE 10 */
+  flex: val;
+
+x-g(v)
+  flex-grow: v
+  -webkit-flex-grow: v
+
+x-s(v)
+  flex-shrink: v
+  -webkit-flex-shrink: v
+
+jb()  
+  if arguments[0] == top
+    background: -o-linear-gradient(top,arguments[1],arguments[2])
+    background: -moz-linear-gradient(top,arguments[1],arguments[2])
+    background: -webkit-gradient(linear,top,from(arguments[1]),to(arguments[2]))
+    background: -webkit-linear-gradient(top,arguments[1],arguments[2])
+    background: -ms-linear-gradient(top, arguments[1], arguments[2])
+    background: linear-gradient(to bottom, arguments[1] 0%, arguments[2] 100%)
+  else if arguments[0] == left
+    background: -moz-linear-gradient(left, arguments[1],arguments[2]);
+    background: -webkit-linear-gradient(left, arguments[1],arguments[2]);
+    background: -o-linear-gradient(left, #ace, arguments[1],arguments[2]);

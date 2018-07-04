@@ -1,0 +1,88 @@
+$w = #fff
+$b = #000
+$white16 = rgba(255,255,255,0.16)
+$white36 = rgba(255,255,255,0.36)
+$white56 = rgba(255,255,255,0.56)
+$black16 = rgba(0,0,0,0.16)
+$black36 = rgba(0,0,0,0.36)
+$black56 = rgba(0,0,0,0.56)
+
+.wg-clear
+  zoom:1
+  &:after
+    display:block
+    clear:both
+    content:""
+    visibility: hidden
+    height:0
+.wg-ellipsis
+  t-o:ellipsis
+  o:hidden
+  w-s:nowrap
+/**
+@三角形
+*/
+.triangle-up {
+  w: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid red;
+}
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 100px solid red;
+}
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-right: 100px solid red;
+  border-bottom: 50px solid transparent;
+}
+.triangle-right {
+  w: 0;
+  h: 0;
+  border-top: 50px solid transparent;
+  border-left: 100px solid red;
+  border-bottom: 50px solid transparent;
+}
+#triangle-topleft {
+  width: 0;
+  height: 0;
+  border-top: 100px solid red;
+  border-right: 100px solid transparent;
+}
+#triangle-topright {
+  width: 0;
+  height: 0;
+  border-top: 100px solid red;
+  border-left: 100px solid transparent;
+}
+#triangle-bottomleft {
+  width: 0;
+  height: 0;
+  border-bottom: 100px solid red;
+  border-right: 100px solid transparent;
+}
+#triangle-bottomright {
+  width: 0;
+  height: 0;
+  border-bottom: 100px solid red;
+  border-left: 100px solid transparent;
+}
+
+
+// 画圆弧
+.circleprogress{
+  width: 160px;
+  height: 160px;
+  border:20px solid red;
+  border-radius: 50%;
+  border-left:20px solid transparent;
+  border-bottom:20px solid transparent;
+  -webkit-transform: rotate(45deg);
+}

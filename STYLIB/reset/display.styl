@@ -1,0 +1,40 @@
+d(val)
+  if val == flex or val == f
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+  else if val == inline-flex or val == i-f
+    display: -webkit-inline-box
+    display: -ms-inline-flexbox
+    display: -webkit-inline-flex
+    display: inline-flex
+  else if val == b || val == block
+    display: block
+  else if val == n || val == none
+    display: none
+  else if val == i || val == inline
+    display: inline
+  else if val == i-b || val == inline-block
+    display: inline-block
+  else
+    display: val
+
+o(v)
+  if v == h or v == hidden
+    overflow: hidden
+  else if v == a or v == auto
+    overflow: auto
+  else if v == s or v == scroll
+    overflow: scroll
+  else if v == v or v == visible
+    overflow: visible
+  else
+    overflow:inherit
+
+v(val)
+  if val == h or val == hidden
+    visibility: hidden
+  else
+    visibility: val
